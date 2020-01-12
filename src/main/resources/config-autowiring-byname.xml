@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="robot" class="ex.Robot" autowire="byName">
+    <constructor-arg ref="commandUnit"/>
+    <constructor-arg ref="transmitter"/>
+    <constructor-arg ref="energySupplier"/>
+    </bean>
+    <bean id="transmitter" class="ex.RadioTransmitter" autowire="byName">
+    </bean>
+    <bean id="commandUnit" class="ex.CommandUnit" autowire="byName">
+    </bean>
+    
+    <bean id="energySupplier" class="ex.EnergySupplier" autowire="byName">
+    </bean>
+    
+    <bean id="RadioDriver" class="ex.RadioDriver" autowire="byName">
+    </bean>
+    
+     
+
+</beans>
